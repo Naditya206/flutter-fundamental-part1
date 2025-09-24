@@ -1,20 +1,11 @@
-<<<<<<< HEAD
 # hello_world
 
-A new Flutter project.
+A new flutter project.
 
-## Getting Started
+![alt text](images/01.png)
 
-This project is a starting point for a Flutter application.
+# Praktikum 4: Menerapkan Widget Dasar
 
-A few resources to get you started if this is your first Flutter project:
+![alt text](images/02.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# flutter-fundamental-part1
->>>>>>> ebb6112c0ff94cc243c89203730f75d411bfa9c5
+![alt text](images/03.png)
