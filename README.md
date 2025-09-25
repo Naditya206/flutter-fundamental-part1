@@ -68,7 +68,7 @@
   ```
 ![alt text](images/05.png)
 
-# 7. Praktikum 2: Menghubungkan Perangkat Android atau Emulator
+# Praktikum 2: Menghubungkan Perangkat Android atau Emulator
 
 ![alt text](images/01.png)
 
@@ -161,15 +161,14 @@ Kedua widget ini merupakan elemen fundamental dalam membangun tampilan antarmuka
 
 ---
 
-# 10. Praktikum 5: Menerapkan Widget Material Design dan iOS Cupertino
+# 📱 Praktikum 5: Menerapkan Widget Material Design dan iOS Cupertino
+
 
 ![alt text](images/04.png)
 
 Baik, berikut penjelasan singkat dari **Praktikum 5: Menerapkan Widget Material Design dan iOS Cupertino** dalam format **Markdown**:
 
 ---
-
-# 📱 Praktikum 5: Menerapkan Widget Material Design dan iOS Cupertino
 
 ## 🔹 Langkah 1: Cupertino Button dan Loading Bar
 - Menggunakan **CupertinoButton** (gaya iOS) dan **CupertinoActivityIndicator** sebagai loading bar.
