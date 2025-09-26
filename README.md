@@ -68,20 +68,11 @@
   ```
 ![alt text](images/05.png)
 
-# 7. Praktikum 2: Menghubungkan Perangkat Android atau Emulator
+# Praktikum 2: Menghubungkan Perangkat Android atau Emulator
+
+Dikarenakan saya menggunakan iPhone sebagai gantinya menggunakan emulator berbasis Website Chrome
 
 ![alt text](images/01.png)
-
-# Praktikum 4: Menerapkan Widget Dasar
-
-![alt text](images/02.png)
-
-# 9. Praktikum 4: Menerapkan Widget Dasar
-
-![alt text](images/03.png)
-
-Siap 👍 berikut saya buatkan **laporan Praktikum 4** dalam format **Markdown (README.md)**:
-
 ---
 
 # 📘 Praktikum 4: Menerapkan Widget Dasar
@@ -108,11 +99,7 @@ class MyTextWidget extends StatelessWidget {
 }
 ```
 
-📌 **Catatan:**
-
-* Gantilah `[Nama Lengkap Anda]` dengan nama lengkap Anda.
-* Import `text_widget.dart` ke dalam `main.dart`.
-* Hasil tampilan berupa teks berwarna merah, rata tengah.
+![alt text](images/02.png)
 
 ---
 
@@ -135,6 +122,8 @@ class MyImageWidget extends StatelessWidget {
   }
 }
 ```
+
+![alt text](images/02.png)
 
 📌 **Langkah tambahan:**
 
@@ -161,15 +150,14 @@ Kedua widget ini merupakan elemen fundamental dalam membangun tampilan antarmuka
 
 ---
 
-# 10. Praktikum 5: Menerapkan Widget Material Design dan iOS Cupertino
+# 📱 Praktikum 5: Menerapkan Widget Material Design dan iOS Cupertino
+
 
 ![alt text](images/04.png)
 
 Baik, berikut penjelasan singkat dari **Praktikum 5: Menerapkan Widget Material Design dan iOS Cupertino** dalam format **Markdown**:
 
 ---
-
-# 📱 Praktikum 5: Menerapkan Widget Material Design dan iOS Cupertino
 
 ## 🔹 Langkah 1: Cupertino Button dan Loading Bar
 - Menggunakan **CupertinoButton** (gaya iOS) dan **CupertinoActivityIndicator** sebagai loading bar.
@@ -214,5 +202,106 @@ Baik, berikut penjelasan singkat dari **Praktikum 5: Menerapkan Widget Material 
 - Hasil tanggal ditampilkan pada layar.
 
 ---
+
+# Hasil Code 
+
+```dart
+import 'dart:async';
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: 'Contoh Date & Time Picker',
+      home: MyHomePage(title: 'Contoh Date & Time Picker'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  // Variabel state untuk Date dan Time
+  DateTime selectedDate = DateTime.now();
+  TimeOfDay selectedTime = TimeOfDay.now();
+
+  // Fungsi untuk pilih tanggal
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: selectedDate,
+      firstDate: DateTime(2015, 8),
+      lastDate: DateTime(2101),
+    );
+    if (picked != null && picked != selectedDate) {
+      setState(() {
+        selectedDate = picked;
+      });
+    }
+  }
+
+  // Fungsi untuk pilih waktu
+  Future<void> _selectTime(BuildContext context) async {
+    final TimeOfDay? picked = await showTimePicker(
+      context: context,
+      initialTime: selectedTime,
+    );
+    if (picked != null && picked != selectedTime) {
+      setState(() {
+        selectedTime = picked;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            // Menampilkan tanggal yang dipilih
+            Text("Tanggal: ${selectedDate.toLocal()}".split(' ')[0]),
+            const SizedBox(height: 20.0),
+
+            // Tombol pilih tanggal
+            ElevatedButton(
+              onPressed: () => _selectDate(context),
+              child: const Text('Pilih Tanggal'),
+            ),
+
+            const SizedBox(height: 40.0),
+
+            // Menampilkan waktu yang dipilih
+            Text("Waktu: ${selectedTime.format(context)}"),
+            const SizedBox(height: 20.0),
+
+            // Tombol pilih waktu
+            ElevatedButton(
+              onPressed: () => _selectTime(context),
+              child: const Text('Pilih Waktu'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
 
 
