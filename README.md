@@ -73,17 +73,6 @@
 Dikarenakan saya menggunakan iPhone sebagai gantinya menggunakan emulator berbasis Website Chrome
 
 ![alt text](images/01.png)
-
-# Praktikum 4: Menerapkan Widget Dasar
-
-![alt text](images/02.png)
-
-# 9. Praktikum 4: Menerapkan Widget Dasar
-
-![alt text](images/03.png)
-
-Siap 👍 berikut saya buatkan **laporan Praktikum 4** dalam format **Markdown (README.md)**:
-
 ---
 
 # 📘 Praktikum 4: Menerapkan Widget Dasar
@@ -110,11 +99,7 @@ class MyTextWidget extends StatelessWidget {
 }
 ```
 
-📌 **Catatan:**
-
-* Gantilah `[Nama Lengkap Anda]` dengan nama lengkap Anda.
-* Import `text_widget.dart` ke dalam `main.dart`.
-* Hasil tampilan berupa teks berwarna merah, rata tengah.
+![alt text](images/02.png)
 
 ---
 
@@ -137,6 +122,8 @@ class MyImageWidget extends StatelessWidget {
   }
 }
 ```
+
+![alt text](images/02.png)
 
 📌 **Langkah tambahan:**
 
